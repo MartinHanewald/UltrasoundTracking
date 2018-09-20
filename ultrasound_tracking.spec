@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['ultrasound_tracking.py'],
-             pathex=['C:\\NerveTracking'],
+             pathex=['C:\\UltrasoundTracking'],
              binaries=[],
              datas=[],
              hiddenimports=[],
