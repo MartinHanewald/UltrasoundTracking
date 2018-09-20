@@ -1,0 +1,27 @@
+# -------------------------------------------------------------
+# ULTRASOUND TRACKING CONFIG FILE
+# -------------------------------------------------------------
+
+[General]
+# This is the main folder. All subfolders are scanned, and images in the deepest level are analyzed.
+# The first variable level always refers to this main folder.
+folder = C:\Users\Martin Hanewald\OneDrive - QUNIS GmbH\Transversal Nerves\BCP02
+
+# The scaling factor can be a floating point number. All output x,y coordinates are multiplied with it.
+scaling_factor = 1.0
+
+# This option defines the image file ending the program looks for
+image_format = TIF
+
+[Variables]
+# The level1 name always refers to the main folder above, all subsequent levels are applied to the subfolders
+# One should always match the number of levels to the number of subfolder levels + 1
+level1 = patient
+level2 = movement
+level3 = side
+level4 = repetition
+
+# you can add level5, level6, etc. if necessary
+
+
+

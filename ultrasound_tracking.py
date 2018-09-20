@@ -7,6 +7,7 @@ import simplejson
 import matplotlib.pyplot as plt
 import logging
 import datetime
+import configparser
 
 # global constants
 
@@ -34,16 +35,42 @@ plt.ylim((-10, 10))
 plt.xlim((-10, 10))
 plt.show()
 
+def catch_errors():
+    cv2.destroyAllWindows()
+    plt.close()
+    input("Press Enter to continue...")
+    sys.exit()
+
 # read config
+# try:
+#     f = open('tracking_config.json')
+#     config = simplejson.loads(f.read())
+# except FileNotFoundError:
+#     logging.error('No config file found.')
+#     catch_errors()
+# except simplejson.errors.JSONDecodeError as err:
+#     logging.error('Config file is not in valid JSON format: ' + format(err))
+#     catch_errors()
+
+
 try:
-    f = open('tracking_config.json')
-    config = simplejson.loads(f.read())
+    configfile = configparser.ConfigParser(allow_no_value=True)
+    configfile.read('tracking_config.txt')
 except FileNotFoundError:
     logging.error('No config file found.')
-    sys.exit()
-except simplejson.errors.JSONDecodeError as err:
-    logging.error('Config file is not in valid JSON format: ' + format(err))
-    sys.exit()
+    catch_errors()
+
+try:
+    config = {}
+    for keys in configfile['General']:
+        config[keys] = configfile['General'][keys]
+
+    config['variables'] = {}
+    for keys in configfile['Variables']:
+        config['variables'][keys] = configfile['Variables'][keys]
+except:
+    logging.error('Config file missing attributes.')
+    catch_errors()
 
 # set walking directory
 walk_dir = config['folder']
@@ -72,6 +99,7 @@ class UltrasoundTracking:
     def reload_status(self):
         self.status = np.zeros((512, 700, 3), np.uint8)
         font = cv2.FONT_HERSHEY_SIMPLEX
+
         nervepoint = self.get_point('nerve')
         fixpoint = self.get_point('fix')
 
@@ -229,6 +257,9 @@ class UltrasoundTracking:
         else:
             self.tracking = simplejson.load(f)
 
+        if not self.tracking and self.n > 0:
+            self.reset_tracking()
+
     def get_trial_status(self, trial):
         status = {'nerve': [], 'fix': []}
         for k in range(self.n):
@@ -248,11 +279,13 @@ class UltrasoundTracking:
         self.reload_image()
 
     def reset_trial(self):
-        self.tracking[self.trial] = []
-        self.add_trial(self.trial)
-        self.write_tracking()
-        self.plot_distance()
-        self.reload_image()
+        if self.tracking:
+            self.tracking[self.trial] = []
+            if self.n > 0:
+                self.add_trial(self.trial)
+            self.write_tracking()
+            self.plot_distance()
+            self.reload_image()
 
     def add_trial(self, trial):
         for k in range(self.n):
@@ -270,12 +303,16 @@ class UltrasoundTracking:
             )
 
     def reload_folder(self):
-        self.folder = folderlist[self.kfold]
-        self.imglist = []
-        for file in os.listdir(self.folder):
-            if file.endswith(config["image_format"]):
-                self.imglist.append(file)
-        self.n = self.imglist.__len__()
+        if folderlist:
+            self.folder = folderlist[self.kfold]
+            self.imglist = []
+            for file in os.listdir(self.folder):
+                if file.endswith(config["image_format"]):
+                    self.imglist.append(file)
+            self.n = self.imglist.__len__()
+        else:
+            logging.error('Folder not found.')
+            sys.exit()
 
     def reload_image(self):
         # self.reload_folder()
@@ -289,6 +326,7 @@ class UltrasoundTracking:
             self.reload_status()
         else:
             self.cvobj = np.zeros((512, 512, 3), np.uint8)
+            self.tracking = []
             self.reload_status()
             logging.error('No images to display with format ' + config["image_format"])
 
@@ -303,13 +341,13 @@ class UltrasoundTracking:
 
     def next_image(self):
         self.kfile += 1
-        if self.kfile == self.n:
+        if self.kfile >= self.n:
             self.kfile = 0
         self.reload_image()
 
     def prev_image(self):
         self.kfile -= 1
-        if self.kfile == -1:
+        if self.kfile <= -1:
             self.kfile = self.n - 1
         self.reload_image()
 
@@ -353,10 +391,16 @@ class UltrasoundTracking:
         self.write_tracking()
 
     def get_rectangle(self, target):
-        return self.tracking[self.trial][self.kfile][target]['rect']
+        if self.tracking:
+            return self.tracking[self.trial][self.kfile][target]['rect']
+        else:
+            return {}
 
     def get_point(self, target):
-        return self.tracking[self.trial][self.kfile][target]['point']
+        if self.tracking:
+            return self.tracking[self.trial][self.kfile][target]['point']
+        else:
+            return {}
 
     def show_rectangle(self, target):
         if target == 'nerve':
@@ -431,8 +475,12 @@ class UltrasoundTracking:
             self.next_image()
         self.write_tracking()
 
-
-img = UltrasoundTracking()
+try:
+    img = UltrasoundTracking()
+except SystemExit:
+    logging.error("Aborting execution.")
+except:
+    logging.error("Unexpected error: " + str(sys.exc_info()[0]))
 
 
 # dummy function
@@ -502,43 +550,48 @@ cv2.putText(helpscreen, "O:   Create output csv file in working folder", (10, 29
 cv2.putText(helpscreen, "WARNING: All changes to rectangles are saved immediately to tracking.json files", (10, 350), font, .5, YELLOW, 1,
             cv2.LINE_AA)
 
+
+
 # main program loop
 while 1:
-    cv2.imshow('image', img.cvobj)
-    cv2.imshow('status', img.status)
-    if helpflag:
-        cv2.imshow('help', helpscreen)
-    else:
-        cv2.destroyWindow('help')
+    if 'img' in locals():
+        cv2.imshow('image', img.cvobj)
+        cv2.imshow('status', img.status)
+        if helpflag:
+            cv2.imshow('help', helpscreen)
+        else:
+            cv2.destroyWindow('help')
 
-    k = cv2.waitKey(1) & 0xFF
-    # print(k)
-    if k == 27:
-        break
-    elif k == ord('w'):
-        img.prev_folder()
-    elif k == ord('a'):
-        img.prev_image()
-    elif k == ord('s'):
-        img.next_folder()
-    elif k == ord('d'):
-        img.next_image()
-    elif k == ord('e'):
-        manual = not manual
-        img.reload_status()
-    elif k == ord('q'):
-        img.reset_trial()
-    elif k == 32:
-        mode = not mode
-        img.reload_status()
-    elif k == 9:
-        img.next_trial()
-    elif k == ord('o'):
-        img.export_data()
-    elif k in range(49, 56):
-        img.tracker_type = TRACKER_TYPES[k - 49]
-        img.reload_status()
-    elif k == ord('h'):
-        helpflag = not helpflag
+        k = cv2.waitKey(1) & 0xFF
+        # print(k)
+        if k == 27:
+            break
+        elif k == ord('w'):
+            img.prev_folder()
+        elif k == ord('a'):
+            img.prev_image()
+        elif k == ord('s'):
+            img.next_folder()
+        elif k == ord('d'):
+            img.next_image()
+        elif k == ord('e'):
+            manual = not manual
+            img.reload_status()
+        elif k == ord('q'):
+            img.reset_trial()
+        elif k == 32:
+            mode = not mode
+            img.reload_status()
+        elif k == 9:
+            img.next_trial()
+        elif k == ord('o'):
+            img.export_data()
+        elif k in range(49, 56):
+            img.tracker_type = TRACKER_TYPES[k - 49]
+            img.reload_status()
+        elif k == ord('h'):
+            helpflag = not helpflag
+    else:
+        catch_errors()
 
 cv2.destroyAllWindows()
