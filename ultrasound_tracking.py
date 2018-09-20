@@ -205,7 +205,7 @@ class UltrasoundTracking:
             self.next_folder()
 
         out_df = pd.concat(temp)
-        out_df[['x', 'y']] = out_df[['x', 'y']] * config['scaling_factor']
+        out_df[['x', 'y']] = out_df[['x', 'y']] * float(config['scaling_factor'])
         try:
             out_df.to_csv(os.path.join(config['folder'], 'results.csv'), sep=";", decimal=",", index=False)
         except PermissionError as err:
