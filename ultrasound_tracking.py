@@ -1,13 +1,11 @@
-import os
-import sys
-import cv2
+import os, sys
 import numpy as np
-import pandas as pd
-import simplejson
 import matplotlib.pyplot as plt
-import logging
+import pandas as pd
+import cv2
+import simplejson
 import datetime
-import configparser
+import logging
 
 # global constants
 
@@ -17,84 +15,45 @@ GREEN = (0, 255, 0)
 YELLOW = (0, 255, 255)
 TRACKER_TYPES = ('BOOSTING', 'MIL', 'KCF', 'TLD', 'MEDIANFLOW', 'GOTURN', 'MOSSE', 'CSRT')
 
-# global variables
-drawing = False  # true if mouse is pressed
-mode = True  # if True, draw rectangle for object, else for fixpoint
-manual = False  # if True, draw rectangles manual without tracking
-helpflag = False  # if True, show helpscreen
-ix, iy = -1, -1
-x, y = 10, 10
-
-# configure logging
-logging.basicConfig(format='%(levelname)s [%(asctime)s]: %(message)s', level=logging.INFO)
-
-# init plot
-plt.style.use('seaborn-whitegrid')
-plt.ion()
-plt.ylim((-10, 10))
-plt.xlim((-10, 10))
-plt.show()
-
-def catch_errors():
-    cv2.destroyAllWindows()
-    plt.close()
-    input("Press Enter to continue...")
-    sys.exit()
-
-# read config
-# try:
-#     f = open('tracking_config.json')
-#     config = simplejson.loads(f.read())
-# except FileNotFoundError:
-#     logging.error('No config file found.')
-#     catch_errors()
-# except simplejson.errors.JSONDecodeError as err:
-#     logging.error('Config file is not in valid JSON format: ' + format(err))
-#     catch_errors()
-
-
-try:
-    configfile = configparser.ConfigParser(allow_no_value=True)
-    configfile.read('tracking_config.txt')
-except FileNotFoundError:
-    logging.error('No config file found.')
-    catch_errors()
-
-try:
-    config = {}
-    for keys in configfile['General']:
-        config[keys] = configfile['General'][keys]
-
-    config['variables'] = {}
-    for keys in configfile['Variables']:
-        config['variables'][keys] = configfile['Variables'][keys]
-except:
-    logging.error('Config file missing attributes.')
-    catch_errors()
-
-# set walking directory
-walk_dir = config['folder']
-walk_dir = os.path.abspath(walk_dir)
-folderlist = []
-for root, subdirs, files in os.walk(walk_dir):
-    if not subdirs:
-        folderlist.append(root)
-
 
 # main image tracking class
 class UltrasoundTracking:
     ntrials = 5
 
-    def __init__(self):
+    def __init__(self, config):
+        self.config = config
+        self.parse_walkdir()
+        self.drawing = False  # true if mouse is pressed
+        self.mode = True  # if True, draw rectangle for object, else for fixpoint
+        self.manual = False  # if True, draw rectangles manual without tracking
+        self.helpflag = False  # if True, show helpscreen
+        self.ix, self.iy = -1, -1
+        self.x, self.y = 10, 10
         self.kfold = 0
         self.kfile = 0
         self.trial = 0
         self.tracker_type = TRACKER_TYPES[1]
-        self.nfolder = folderlist.__len__()
+        self.nfolder = self.folderlist.__len__()
         self.reload_folder()
         self.read_tracking()
         self.reload_image()
         self.plot_distance()
+        self.helpscreen = self.draw_helpscreen()
+
+        # init plotting
+        plt.style.use('seaborn-whitegrid')
+        plt.ion()
+        plt.ylim((-10, 10))
+        plt.xlim((-10, 10))
+        plt.show()
+
+    def parse_walkdir(self):
+        # set walking directory
+        self.walk_dir = os.path.abspath(self.config['folder'])
+        self.folderlist = []
+        for root, subdirs, files in os.walk(self.walk_dir):
+            if not subdirs:
+                self.folderlist.append(root)
 
     def reload_status(self):
         self.status = np.zeros((512, 700, 3), np.uint8)
@@ -106,7 +65,7 @@ class UltrasoundTracking:
         cv2.putText(self.status, 'Folder:', (10, 30), font, 1, WHITE, 2, cv2.LINE_AA)
         cv2.putText(self.status, '{0} / {1}'.format(self.kfold + 1, self.nfolder), (150, 30), font, 1, WHITE,
                     2, cv2.LINE_AA)
-        cv2.putText(self.status, self.folder.replace(walk_dir, ''), (300, 30), font, .5, WHITE, 1, cv2.LINE_AA)
+        cv2.putText(self.status, self.folder.replace(self.walk_dir, ''), (300, 30), font, .5, WHITE, 1, cv2.LINE_AA)
 
         cv2.putText(self.status, 'Trial:', (10, 80), font, 1, WHITE, 2, cv2.LINE_AA)
         cv2.putText(self.status, '{0} / {1}'.format(self.trial + 1, self.ntrials), (150, 80), font, 1, WHITE,
@@ -157,11 +116,11 @@ class UltrasoundTracking:
                               color,
                               -1)
 
-            if manual:
+            if self.manual:
                 cv2.rectangle(self.status, (10, 400), (300, 500), YELLOW, -1)
                 cv2.putText(self.status, 'MANUAL', (40, 470), font, 2, (0, 0, 0), 2, cv2.LINE_AA)
 
-            if mode:
+            if self.mode:
                 cv2.rectangle(self.status, (xstart - 5, ystart - 5),
                               (xstart + rectwidth + 5,
                                ystart + rectheight + (rectspace + rectheight) * (self.n - 1) + 5),
@@ -200,21 +159,21 @@ class UltrasoundTracking:
 
     def export_data(self):
         temp = []
-        for k in range(len(folderlist)):
+        for k in range(self.nfolder):
             temp.append(self.gather_points())
             self.next_folder()
 
         out_df = pd.concat(temp)
-        out_df[['x', 'y']] = out_df[['x', 'y']] * float(config['scaling_factor'])
+        out_df[['x', 'y']] = out_df[['x', 'y']] * float(self.config['scaling_factor'])
         try:
-            out_df.to_csv(os.path.join(config['folder'], 'results.csv'), sep=";", decimal=",", index=False)
+            out_df.to_csv(os.path.join(self.config['folder'], 'results.csv'), sep=";", decimal=",", index=False)
         except PermissionError as err:
             logging.error('Cannot access output file: ' + format(err))
         else:
             logging.info('Output successfully written.')
 
     def parse_folder_to_vars(self):
-        vars = config['variables'].values()
+        vars = self.config['variables'].values()
         varvals = self.folder.split('\\')[-len(vars):]
         var_dict = {key: value for key, value in zip(vars, varvals)}
         return var_dict
@@ -246,16 +205,20 @@ class UltrasoundTracking:
 
     def write_tracking(self):
         f = open(os.path.join(self.folder, 'tracking.json'), "w")
-        f.write(simplejson.dumps(self.tracking, indent=4))
+        try:
+            f.write(simplejson.dumps(self.tracking, indent=4))
+        finally:
+            f.close()
 
     def read_tracking(self):
         self.reload_folder()
         try:
             f = open(os.path.join(self.folder, 'tracking.json'))
-        except FileNotFoundError:
-            self.reset_tracking()
-        else:
             self.tracking = simplejson.load(f)
+            f.close()
+        except:
+            self.reset_tracking()
+
 
         if not self.tracking and self.n > 0:
             self.reset_tracking()
@@ -303,11 +266,11 @@ class UltrasoundTracking:
             )
 
     def reload_folder(self):
-        if folderlist:
-            self.folder = folderlist[self.kfold]
+        if self.folderlist:
+            self.folder = self.folderlist[self.kfold]
             self.imglist = []
             for file in os.listdir(self.folder):
-                if file.endswith(config["image_format"]):
+                if file.endswith(self.config["image_format"]):
                     self.imglist.append(file)
             self.n = self.imglist.__len__()
         else:
@@ -328,7 +291,7 @@ class UltrasoundTracking:
             self.cvobj = np.zeros((512, 512, 3), np.uint8)
             self.tracking = []
             self.reload_status()
-            logging.error('No images to display with format ' + config["image_format"])
+            logging.error('No images to display with format ' + self.config["image_format"])
 
     def next_trial(self):
         global mode
@@ -357,7 +320,7 @@ class UltrasoundTracking:
         self.write_tracking()
         self.kfold += 1
         self.kfile = 0
-        if self.kfold == folderlist.__len__():
+        if self.kfold == self.nfolder:
             self.kfold = 0
         self.read_tracking()
         self.reload_image()
@@ -369,7 +332,7 @@ class UltrasoundTracking:
         self.kfold -= 1
         self.kfile = 0
         if self.kfold == -1:
-            self.kfold = folderlist.__len__() - 1
+            self.kfold = self.nfolder - 1
         self.read_tracking()
         self.reload_image()
 
@@ -442,6 +405,8 @@ class UltrasoundTracking:
             tracker = cv2.TrackerMOSSE_create()
         if self.tracker_type == "CSRT":
             tracker = cv2.TrackerCSRT_create()
+        else:
+            tracker = cv2.TrackerMIL_create()
 
         rect = self.get_rectangle(target)
         if rect:
@@ -475,123 +440,65 @@ class UltrasoundTracking:
             self.next_image()
         self.write_tracking()
 
-try:
-    img = UltrasoundTracking()
-except SystemExit:
-    logging.error("Aborting execution.")
-except:
-    logging.error("Unexpected error: " + str(sys.exc_info()[0]))
+    # mouse callback function
+    def draw_shape(self, event, x, y, flags, param):
 
+        if event == cv2.EVENT_LBUTTONDOWN:
+            self.drawing = True
+            self.ix, self.iy = x, y
 
-# dummy function
-def nothing(x):
-    pass
+        elif event == cv2.EVENT_MOUSEMOVE:
+            rect = {'x1': self.ix, 'y1': self.iy,
+                    'x2': x, 'y2': y}
+            if self.drawing:
+                if self.mode:
+                    self.set_rectangle(rect, 'nerve')
+                else:
+                    self.set_rectangle(rect, 'fix')
 
+        elif event == cv2.EVENT_LBUTTONUP:
+            self.drawing = False
+            if not self.manual:
+                if self.mode:
+                    self.track_rectangle('nerve')
+                else:
+                    self.track_rectangle('fix')
+            self.write_tracking()
+            self.plot_distance()
 
-# mouse callback function
-def draw_shape(event, x, y, flags, param):
-    global ix, iy, drawing, mode
+        self.reload_image()
 
-    if event == cv2.EVENT_LBUTTONDOWN:
-        drawing = True
-        ix, iy = x, y
+    # dummy function
+    def nothing(x):
+        pass
 
-    elif event == cv2.EVENT_MOUSEMOVE:
-        # xdiff = max(0, x - ix)
-        # ydiff = max(0, y - iy)
+    # make helpscreen
+    def draw_helpscreen(self):
+        helpscreen = np.zeros((512, 700, 3), np.uint8)
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        cv2.putText(helpscreen, "Navigation:", (10, 30), font, .5, WHITE, 1, cv2.LINE_AA)
+        cv2.putText(helpscreen, "W:   previous folder", (10, 50), font, .4, WHITE, 1, cv2.LINE_AA)
+        cv2.putText(helpscreen, "A:   previous image", (10, 70), font, .4, WHITE, 1, cv2.LINE_AA)
+        cv2.putText(helpscreen, "S:   next folder", (10, 90), font, .4, WHITE, 1, cv2.LINE_AA)
+        cv2.putText(helpscreen, "D:   next image", (10, 110), font, .4, WHITE, 1, cv2.LINE_AA)
 
-        rect = {'x1': ix, 'y1': iy,
-                'x2': x, 'y2': y}
-        if drawing:
-            if mode:
-                img.set_rectangle(rect, 'nerve')
-            else:
-                img.set_rectangle(rect, 'fix')
+        cv2.putText(helpscreen, "Selection:", (10, 140), font, .5, WHITE, 1, cv2.LINE_AA)
+        cv2.putText(helpscreen, "TAB:   skip through trials", (10, 160), font, .4, WHITE, 1, cv2.LINE_AA)
+        cv2.putText(helpscreen, "SPACE:   change selection target (object or fixpoint)", (10, 180), font, .4, WHITE, 1,
+                    cv2.LINE_AA)
+        cv2.putText(helpscreen, "E:   change selection mode (manual or tracking)", (10, 200), font, .4, WHITE, 1,
+                    cv2.LINE_AA)
+        cv2.putText(helpscreen, "1-7:   Select different tracking algorithms", (10, 220), font, .4, WHITE, 1,
+                    cv2.LINE_AA)
 
-    elif event == cv2.EVENT_LBUTTONUP:
-        drawing = False
-        if not manual:
-            if mode:
-                img.track_rectangle('nerve')
-            else:
-                img.track_rectangle('fix')
-        img.write_tracking()
-        img.plot_distance()
+        cv2.putText(helpscreen, "Manipulation:", (10, 250), font, .5, WHITE, 1, cv2.LINE_AA)
+        cv2.putText(helpscreen, "Q:   Reset rectangles for current folder", (10, 270), font, .4, WHITE, 1, cv2.LINE_AA)
+        cv2.putText(helpscreen, "O:   Create output csv file in working folder", (10, 290), font, .4, WHITE, 1,
+                    cv2.LINE_AA)
 
-    img.reload_image()
+        cv2.putText(helpscreen, "WARNING: All changes to rectangles are saved immediately to tracking.json files",
+                    (10, 350), font, .5, YELLOW, 1,
+                    cv2.LINE_AA)
 
+        return helpscreen
 
-# init windows and callback function
-cv2.namedWindow('image', cv2.WINDOW_NORMAL)
-cv2.namedWindow('status', cv2.WINDOW_NORMAL)
-cv2.namedWindow('help', cv2.WINDOW_NORMAL)
-cv2.setMouseCallback('image', draw_shape)
-
-# make helpscreen
-helpscreen = np.zeros((512, 700, 3), np.uint8)
-font = cv2.FONT_HERSHEY_SIMPLEX
-cv2.putText(helpscreen, "Navigation:", (10, 30), font, .5, WHITE, 1, cv2.LINE_AA)
-cv2.putText(helpscreen, "W:   previous folder", (10, 50), font, .4, WHITE, 1, cv2.LINE_AA)
-cv2.putText(helpscreen, "A:   previous image", (10, 70), font, .4, WHITE, 1, cv2.LINE_AA)
-cv2.putText(helpscreen, "S:   next folder", (10, 90), font, .4, WHITE, 1, cv2.LINE_AA)
-cv2.putText(helpscreen, "D:   next image", (10, 110), font, .4, WHITE, 1, cv2.LINE_AA)
-
-cv2.putText(helpscreen, "Selection:", (10, 140), font, .5, WHITE, 1, cv2.LINE_AA)
-cv2.putText(helpscreen, "TAB:   skip through trials", (10, 160), font, .4, WHITE, 1, cv2.LINE_AA)
-cv2.putText(helpscreen, "SPACE:   change selection target (object or fixpoint)", (10, 180), font, .4, WHITE, 1,
-            cv2.LINE_AA)
-cv2.putText(helpscreen, "E:   change selection mode (manual or tracking)", (10, 200), font, .4, WHITE, 1, cv2.LINE_AA)
-cv2.putText(helpscreen, "1-7:   Select different tracking algorithms", (10, 220), font, .4, WHITE, 1, cv2.LINE_AA)
-
-cv2.putText(helpscreen, "Manipulation:", (10, 250), font, .5, WHITE, 1, cv2.LINE_AA)
-cv2.putText(helpscreen, "Q:   Reset rectangles for current folder", (10, 270), font, .4, WHITE, 1, cv2.LINE_AA)
-cv2.putText(helpscreen, "O:   Create output csv file in working folder", (10, 290), font, .4, WHITE, 1, cv2.LINE_AA)
-
-cv2.putText(helpscreen, "WARNING: All changes to rectangles are saved immediately to tracking.json files", (10, 350), font, .5, YELLOW, 1,
-            cv2.LINE_AA)
-
-
-
-# main program loop
-while 1:
-    if 'img' in locals():
-        cv2.imshow('image', img.cvobj)
-        cv2.imshow('status', img.status)
-        if helpflag:
-            cv2.imshow('help', helpscreen)
-        else:
-            cv2.destroyWindow('help')
-
-        k = cv2.waitKey(1) & 0xFF
-        # print(k)
-        if k == 27:
-            break
-        elif k == ord('w'):
-            img.prev_folder()
-        elif k == ord('a'):
-            img.prev_image()
-        elif k == ord('s'):
-            img.next_folder()
-        elif k == ord('d'):
-            img.next_image()
-        elif k == ord('e'):
-            manual = not manual
-            img.reload_status()
-        elif k == ord('q'):
-            img.reset_trial()
-        elif k == 32:
-            mode = not mode
-            img.reload_status()
-        elif k == 9:
-            img.next_trial()
-        elif k == ord('o'):
-            img.export_data()
-        elif k in range(49, 56):
-            img.tracker_type = TRACKER_TYPES[k - 49]
-            img.reload_status()
-        elif k == ord('h'):
-            helpflag = not helpflag
-    else:
-        catch_errors()
-
-cv2.destroyAllWindows()

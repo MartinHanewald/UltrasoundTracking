@@ -1,0 +1,5 @@
+# use environment.yml file to install all packages
+# exe can be build with latest pyinstaller version, install with
+
+pip install https://github.com/pyinstaller/pyinstaller/archive/develop.zip
+pyinstaller -F main.py

@@ -1,0 +1,217 @@
+file;folder;image_no;movement;object;patient;repetition;side;time;trial;x;y
+BCP01_T_0080.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\2;1;bcp01_trans_wrist;nerve;BCP01;2;affected;2018-10-03 19:08:10;3;452,0;335,0
+BCP01_T_0081.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\2;2;bcp01_trans_wrist;nerve;BCP01;2;affected;2018-10-03 19:08:11;3;465,0;314,0
+BCP01_T_0080.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\2;1;bcp01_trans_wrist;fix;BCP01;2;affected;2018-10-03 19:08:09;3;318,0;245,0
+BCP01_T_0081.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\2;2;bcp01_trans_wrist;fix;BCP01;2;affected;2018-10-03 19:08:09;3;323,0;238,0
+BCP01_T_0080.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\2;1;bcp01_trans_wrist;nerve;BCP01;2;affected;2018-09-20 17:44:33;5;346,0;278,0
+BCP01_T_0081.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\2;2;bcp01_trans_wrist;nerve;BCP01;2;affected;2018-09-20 17:44:33;5;346,0;268,0
+BCP01_T_0082.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\3;1;bcp01_trans_wrist;nerve;BCP01;3;affected;2018-09-20 16:50:40;1;393,0;423,0
+BCP01_T_0083.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\3;2;bcp01_trans_wrist;nerve;BCP01;3;affected;2018-09-20 16:50:40;1;402,0;401,0
+BCP01_T_0082.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\3;1;bcp01_trans_wrist;fix;BCP01;3;affected;2018-09-20 16:50:40;1;397,0;275,0
+BCP01_T_0083.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\3;2;bcp01_trans_wrist;fix;BCP01;3;affected;2018-09-20 16:50:40;1;397,0;258,0
+BCP01_T_0051.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;1;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:45;1;266,0;170,0
+BCP01_T_0052.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;2;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:45;1;282,0;168,0
+BCP01_T_0053.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;3;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:45;1;280,0;172,0
+BCP01_T_0054.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;4;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:45;1;285,0;173,0
+BCP01_T_0055.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;5;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:46;1;295,0;171,0
+BCP01_T_0056.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;6;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:46;1;301,0;173,0
+BCP01_T_0057.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;7;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:46;1;289,0;172,0
+BCP01_T_0058.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;8;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:46;1;298,0;176,0
+BCP01_T_0059.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;9;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:46;1;298,0;182,0
+BCP01_T_0051.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;1;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:50;1;280,0;446,0
+BCP01_T_0052.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;2;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:50;1;285,0;456,0
+BCP01_T_0053.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;3;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:50;1;290,0;452,0
+BCP01_T_0054.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;4;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:50;1;291,0;456,0
+BCP01_T_0055.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;5;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:51;1;299,0;455,0
+BCP01_T_0056.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;6;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:51;1;320,0;452,0
+BCP01_T_0057.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;7;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:51;1;320,0;448,0
+BCP01_T_0058.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;8;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:51;1;322,0;451,0
+BCP01_T_0059.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;9;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:51;1;321,0;454,0
+BCP01_T_0051.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;1;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:59;2;381,0;340,0
+BCP01_T_0052.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;2;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:59;2;399,0;333,0
+BCP01_T_0053.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;3;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:59;2;398,0;324,0
+BCP01_T_0054.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;4;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:59;2;410,0;328,0
+BCP01_T_0055.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;5;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:07:59;2;420,0;330,0
+BCP01_T_0056.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;6;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:00;2;432,0;327,0
+BCP01_T_0057.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;7;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:00;2;430,0;316,0
+BCP01_T_0058.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;8;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:00;2;427,0;298,0
+BCP01_T_0059.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;9;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:00;2;417,0;296,0
+BCP01_T_0051.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;1;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:56;2;279,0;268,0
+BCP01_T_0052.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;2;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:56;2;258,0;255,0
+BCP01_T_0053.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;3;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:56;2;239,0;245,0
+BCP01_T_0054.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;4;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:57;2;237,0;223,0
+BCP01_T_0055.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;5;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:57;2;244,0;236,0
+BCP01_T_0056.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;6;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:57;2;268,0;236,0
+BCP01_T_0057.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;7;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:57;2;249,0;231,0
+BCP01_T_0058.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;8;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:57;2;231,0;231,0
+BCP01_T_0059.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;9;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:07:57;2;211,0;235,0
+BCP01_T_0051.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;1;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:02;3;312,0;236,0
+BCP01_T_0052.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;2;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:03;3;319,0;234,0
+BCP01_T_0053.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;3;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:03;3;310,0;230,0
+BCP01_T_0054.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;4;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:03;3;290,0;227,0
+BCP01_T_0055.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;5;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:03;3;284,0;245,0
+BCP01_T_0056.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;6;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:03;3;305,0;246,0
+BCP01_T_0057.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;7;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:03;3;311,0;261,0
+BCP01_T_0058.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;8;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:03;3;317,0;259,0
+BCP01_T_0059.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;9;bcp01_trans_elbow;nerve;BCP01;1;affected;2018-10-03 19:08:03;3;307,0;261,0
+BCP01_T_0051.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;1;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:08:05;3;387,0;349,0
+BCP01_T_0052.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;2;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:08:05;3;395,0;344,0
+BCP01_T_0053.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;3;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:08:05;3;400,0;332,0
+BCP01_T_0054.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;4;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:08:05;3;410,0;336,0
+BCP01_T_0055.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;5;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:08:05;3;421,0;337,0
+BCP01_T_0056.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;6;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:08:05;3;429,0;335,0
+BCP01_T_0057.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;7;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:08:05;3;434,0;323,0
+BCP01_T_0058.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;8;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:08:05;3;425,0;307,0
+BCP01_T_0059.TIF;c:\ust\sampledata\BCP01\bcp01_trans_elbow\affected\1;9;bcp01_trans_elbow;fix;BCP01;1;affected;2018-10-03 19:08:05;3;413,0;300,0
+BCP01_T_0012.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\1;1;bcp01_trans_neck100;nerve;BCP01;1;affected;2018-09-20 17:38:53;1;355,0;278,0
+BCP01_T_0013.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\1;2;bcp01_trans_neck100;nerve;BCP01;1;affected;2018-09-20 17:38:53;1;358,0;279,0
+BCP01_T_0014.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\1;3;bcp01_trans_neck100;nerve;BCP01;1;affected;2018-09-20 17:38:54;1;360,0;280,0
+BCP01_T_0015.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\1;4;bcp01_trans_neck100;nerve;BCP01;1;affected;2018-09-20 17:38:54;1;361,0;280,0
+BCP01_T_0016.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\1;5;bcp01_trans_neck100;nerve;BCP01;1;affected;2018-09-20 17:38:54;1;361,0;282,0
+BCP01_T_0017.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\1;6;bcp01_trans_neck100;nerve;BCP01;1;affected;2018-09-20 17:38:54;1;350,0;291,0
+BCP01_T_0012.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\1;1;bcp01_trans_neck100;fix;BCP01;1;affected;2018-09-20 17:38:54;1;337,0;436,0
+BCP01_T_0013.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\1;2;bcp01_trans_neck100;fix;BCP01;1;affected;2018-09-20 17:38:54;1;336,0;435,0
+BCP01_T_0014.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\1;3;bcp01_trans_neck100;fix;BCP01;1;affected;2018-09-20 17:38:54;1;337,0;437,0
+BCP01_T_0015.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\1;4;bcp01_trans_neck100;fix;BCP01;1;affected;2018-09-20 17:38:54;1;342,0;440,0
+BCP01_T_0016.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\1;5;bcp01_trans_neck100;fix;BCP01;1;affected;2018-09-20 17:38:54;1;338,0;438,0
+BCP01_T_0017.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\1;6;bcp01_trans_neck100;fix;BCP01;1;affected;2018-09-20 17:38:55;1;330,0;442,0
+BCP01_T_0018.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\2;1;bcp01_trans_neck100;nerve;BCP01;2;affected;2018-09-20 17:38:52;1;313,0;446,0
+BCP01_T_0019.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\2;2;bcp01_trans_neck100;nerve;BCP01;2;affected;2018-09-20 17:38:52;1;314,0;449,0
+BCP01_T_0020.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\2;3;bcp01_trans_neck100;nerve;BCP01;2;affected;2018-09-20 17:38:52;1;311,0;448,0
+BCP01_T_0021.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\2;4;bcp01_trans_neck100;nerve;BCP01;2;affected;2018-09-20 17:38:52;1;311,0;448,0
+BCP01_T_0022.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\2;5;bcp01_trans_neck100;nerve;BCP01;2;affected;2018-09-20 17:38:52;1;310,0;448,0
+BCP01_T_0023.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\2;6;bcp01_trans_neck100;nerve;BCP01;2;affected;2018-09-20 17:38:52;1;305,0;448,0
+BCP01_T_0018.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\2;1;bcp01_trans_neck100;fix;BCP01;2;affected;2018-09-20 17:38:51;1;313,0;269,0
+BCP01_T_0019.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\2;2;bcp01_trans_neck100;fix;BCP01;2;affected;2018-09-20 17:38:51;1;312,0;272,0
+BCP01_T_0020.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\2;3;bcp01_trans_neck100;fix;BCP01;2;affected;2018-09-20 17:38:51;1;314,0;270,0
+BCP01_T_0021.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\2;4;bcp01_trans_neck100;fix;BCP01;2;affected;2018-09-20 17:38:51;1;313,0;272,0
+BCP01_T_0022.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\2;5;bcp01_trans_neck100;fix;BCP01;2;affected;2018-09-20 17:38:52;1;312,0;274,0
+BCP01_T_0023.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\2;6;bcp01_trans_neck100;fix;BCP01;2;affected;2018-09-20 17:38:52;1;309,0;277,0
+BCP01_T_0024.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\3;1;bcp01_trans_neck100;nerve;BCP01;3;affected;2018-09-20 17:38:48;1;418,0;311,0
+BCP01_T_0025.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\3;2;bcp01_trans_neck100;nerve;BCP01;3;affected;2018-09-20 17:38:48;1;419,0;313,0
+BCP01_T_0026.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\3;3;bcp01_trans_neck100;nerve;BCP01;3;affected;2018-09-20 17:38:48;1;420,0;313,0
+BCP01_T_0027.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\3;4;bcp01_trans_neck100;nerve;BCP01;3;affected;2018-09-20 17:38:48;1;419,0;314,0
+BCP01_T_0028.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\3;5;bcp01_trans_neck100;nerve;BCP01;3;affected;2018-09-20 17:38:48;1;412,0;314,0
+BCP01_T_0029.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\3;6;bcp01_trans_neck100;nerve;BCP01;3;affected;2018-09-20 17:38:48;1;412,0;314,0
+BCP01_T_0024.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\3;1;bcp01_trans_neck100;fix;BCP01;3;affected;2018-09-20 17:38:49;1;317,0;463,0
+BCP01_T_0025.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\3;2;bcp01_trans_neck100;fix;BCP01;3;affected;2018-09-20 17:38:49;1;322,0;464,0
+BCP01_T_0026.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\3;3;bcp01_trans_neck100;fix;BCP01;3;affected;2018-09-20 17:38:49;1;323,0;465,0
+BCP01_T_0027.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\3;4;bcp01_trans_neck100;fix;BCP01;3;affected;2018-09-20 17:38:49;1;322,0;465,0
+BCP01_T_0028.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\3;5;bcp01_trans_neck100;fix;BCP01;3;affected;2018-09-20 17:38:49;1;320,0;463,0
+BCP01_T_0029.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\affected\3;6;bcp01_trans_neck100;fix;BCP01;3;affected;2018-09-20 17:38:49;1;324,0;465,0
+BCP01_T_0099.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\1;1;bcp01_trans_neck100;nerve;BCP01;1;not affected;2018-09-20 17:12:05;1;398,0;292,0
+BCP01_T_0100.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\1;2;bcp01_trans_neck100;nerve;BCP01;1;not affected;2018-09-20 17:12:05;1;398,0;293,0
+BCP01_T_0101.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\1;3;bcp01_trans_neck100;nerve;BCP01;1;not affected;2018-09-20 17:12:06;1;399,0;292,0
+BCP01_T_0102.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\1;4;bcp01_trans_neck100;nerve;BCP01;1;not affected;2018-09-20 17:12:06;1;398,0;292,0
+BCP01_T_0103.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\1;5;bcp01_trans_neck100;nerve;BCP01;1;not affected;2018-09-20 17:12:06;1;400,0;291,0
+BCP01_T_0104.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\1;6;bcp01_trans_neck100;nerve;BCP01;1;not affected;2018-09-20 17:12:06;1;398,0;289,0
+BCP01_T_0099.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\1;1;bcp01_trans_neck100;fix;BCP01;1;not affected;2018-09-20 17:12:08;1;390,0;426,0
+BCP01_T_0100.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\1;2;bcp01_trans_neck100;fix;BCP01;1;not affected;2018-09-20 17:12:08;1;391,0;426,0
+BCP01_T_0101.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\1;3;bcp01_trans_neck100;fix;BCP01;1;not affected;2018-09-20 17:12:08;1;392,0;425,0
+BCP01_T_0102.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\1;4;bcp01_trans_neck100;fix;BCP01;1;not affected;2018-09-20 17:12:08;1;391,0;426,0
+BCP01_T_0103.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\1;5;bcp01_trans_neck100;fix;BCP01;1;not affected;2018-09-20 17:12:08;1;393,0;425,0
+BCP01_T_0104.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\1;6;bcp01_trans_neck100;fix;BCP01;1;not affected;2018-09-20 17:12:08;1;398,0;424,0
+BCP01_T_0111.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\3;1;bcp01_trans_neck100;nerve;BCP01;3;not affected;2018-09-20 17:38:44;1;403,0;274,0
+BCP01_T_0112.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\3;2;bcp01_trans_neck100;nerve;BCP01;3;not affected;2018-09-20 17:38:45;1;401,0;272,0
+BCP01_T_0113.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\3;3;bcp01_trans_neck100;nerve;BCP01;3;not affected;2018-09-20 17:38:45;1;398,0;273,0
+BCP01_T_0114.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\3;4;bcp01_trans_neck100;nerve;BCP01;3;not affected;2018-09-20 17:38:45;1;402,0;271,0
+BCP01_T_0115.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\3;5;bcp01_trans_neck100;nerve;BCP01;3;not affected;2018-09-20 17:38:45;1;403,0;271,0
+BCP01_T_0116.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck100\not affected\3;6;bcp01_trans_neck100;nerve;BCP01;3;not affected;2018-09-20 17:38:45;1;410,0;269,0
+BCP01_T_0006.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\1;1;bcp01_trans_neck40;nerve;BCP01;1;affected;2018-09-20 17:38:42;1;343,0;454,0
+BCP01_T_0007.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\1;2;bcp01_trans_neck40;nerve;BCP01;1;affected;2018-09-20 17:38:42;1;344,0;456,0
+BCP01_T_0008.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\1;3;bcp01_trans_neck40;nerve;BCP01;1;affected;2018-09-20 17:38:42;1;348,0;455,0
+BCP01_T_0009.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\1;4;bcp01_trans_neck40;nerve;BCP01;1;affected;2018-09-20 17:38:42;1;347,0;457,0
+BCP01_T_0010.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\1;5;bcp01_trans_neck40;nerve;BCP01;1;affected;2018-09-20 17:38:42;1;343,0;456,0
+BCP01_T_0011.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\1;6;bcp01_trans_neck40;nerve;BCP01;1;affected;2018-09-20 17:38:42;1;338,0;450,0
+BCP01_T_0006.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\1;1;bcp01_trans_neck40;fix;BCP01;1;affected;2018-09-20 17:38:40;1;335,0;227,0
+BCP01_T_0007.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\1;2;bcp01_trans_neck40;fix;BCP01;1;affected;2018-09-20 17:38:41;1;337,0;228,0
+BCP01_T_0008.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\1;3;bcp01_trans_neck40;fix;BCP01;1;affected;2018-09-20 17:38:41;1;338,0;229,0
+BCP01_T_0009.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\1;4;bcp01_trans_neck40;fix;BCP01;1;affected;2018-09-20 17:38:41;1;340,0;230,0
+BCP01_T_0010.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\1;5;bcp01_trans_neck40;fix;BCP01;1;affected;2018-09-20 17:38:41;1;334,0;230,0
+BCP01_T_0011.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\1;6;bcp01_trans_neck40;fix;BCP01;1;affected;2018-09-20 17:38:41;1;328,0;230,0
+BCP01_T_0036.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\3;1;bcp01_trans_neck40;nerve;BCP01;3;affected;2018-09-20 17:44:34;5;373,0;303,0
+BCP01_T_0037.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\3;2;bcp01_trans_neck40;nerve;BCP01;3;affected;2018-09-20 17:44:34;5;376,0;304,0
+BCP01_T_0038.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\3;3;bcp01_trans_neck40;nerve;BCP01;3;affected;2018-09-20 17:44:34;5;375,0;304,0
+BCP01_T_0039.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\3;4;bcp01_trans_neck40;nerve;BCP01;3;affected;2018-09-20 17:44:35;5;372,0;305,0
+BCP01_T_0040.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\3;5;bcp01_trans_neck40;nerve;BCP01;3;affected;2018-09-20 17:44:35;5;368,0;306,0
+BCP01_T_0041.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\affected\3;6;bcp01_trans_neck40;nerve;BCP01;3;affected;2018-09-20 17:44:35;5;366,0;304,0
+BCP01_T_0117.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;1;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:15;1;254,0;263,0
+BCP01_T_0118.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;2;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:15;1;253,0;265,0
+BCP01_T_0119.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;3;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:15;1;253,0;264,0
+BCP01_T_0120.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;4;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:15;1;254,0;265,0
+BCP01_T_0121.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;5;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:15;1;251,0;263,0
+BCP01_T_0122.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;6;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:15;1;247,0;267,0
+BCP01_T_0117.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;1;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:16;1;286,0;442,0
+BCP01_T_0118.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;2;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:16;1;285,0;443,0
+BCP01_T_0119.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;3;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:16;1;285,0;443,0
+BCP01_T_0120.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;4;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:16;1;285,0;444,0
+BCP01_T_0121.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;5;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:16;1;285,0;445,0
+BCP01_T_0122.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;6;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:16;1;284,0;445,0
+BCP01_T_0117.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;1;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:19;2;337,0;396,0
+BCP01_T_0118.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;2;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:20;2;334,0;396,0
+BCP01_T_0119.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;3;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:20;2;335,0;394,0
+BCP01_T_0120.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;4;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:20;2;334,0;396,0
+BCP01_T_0121.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;5;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:20;2;332,0;397,0
+BCP01_T_0122.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;6;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:20;2;333,0;396,0
+BCP01_T_0117.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;1;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:19;2;303,0;257,0
+BCP01_T_0118.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;2;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:19;2;301,0;256,0
+BCP01_T_0119.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;3;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:19;2;300,0;256,0
+BCP01_T_0120.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;4;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:19;2;300,0;257,0
+BCP01_T_0121.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;5;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:19;2;298,0;257,0
+BCP01_T_0122.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;6;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:19;2;296,0;258,0
+BCP01_T_0117.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;1;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:21;3;348,0;262,0
+BCP01_T_0118.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;2;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:22;3;345,0;260,0
+BCP01_T_0119.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;3;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:22;3;345,0;261,0
+BCP01_T_0120.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;4;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:22;3;344,0;261,0
+BCP01_T_0121.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;5;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:22;3;344,0;261,0
+BCP01_T_0122.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;6;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:22;3;344,0;262,0
+BCP01_T_0117.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;1;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:22;3;350,0;375,0
+BCP01_T_0118.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;2;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:22;3;350,0;373,0
+BCP01_T_0119.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;3;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:22;3;348,0;374,0
+BCP01_T_0120.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;4;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:22;3;349,0;374,0
+BCP01_T_0121.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;5;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:22;3;348,0;376,0
+BCP01_T_0122.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;6;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:22;3;355,0;374,0
+BCP01_T_0117.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;1;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:24;4;333,0;414,0
+BCP01_T_0118.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;2;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:24;4;332,0;412,0
+BCP01_T_0119.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;3;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:24;4;331,0;413,0
+BCP01_T_0120.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;4;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:24;4;330,0;413,0
+BCP01_T_0121.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;5;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:24;4;331,0;415,0
+BCP01_T_0122.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;6;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:42:24;4;328,0;417,0
+BCP01_T_0117.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;1;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:23;4;381,0;248,0
+BCP01_T_0118.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;2;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:23;4;378,0;247,0
+BCP01_T_0119.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;3;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:23;4;376,0;248,0
+BCP01_T_0120.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;4;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:24;4;377,0;248,0
+BCP01_T_0121.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;5;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:24;4;376,0;248,0
+BCP01_T_0122.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;6;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:24;4;374,0;246,0
+BCP01_T_0117.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;1;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:44:27;5;318,0;252,0
+BCP01_T_0118.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;2;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:44:27;5;316,0;253,0
+BCP01_T_0119.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;3;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:44:27;5;312,0;251,0
+BCP01_T_0120.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;4;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:44:27;5;311,0;251,0
+BCP01_T_0121.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;5;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:44:27;5;311,0;251,0
+BCP01_T_0122.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;6;bcp01_trans_neck40;nerve;BCP01;1;not affected;2018-09-20 17:44:27;5;309,0;251,0
+BCP01_T_0117.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;1;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:31;5;296,0;273,0
+BCP01_T_0118.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;2;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:31;5;295,0;274,0
+BCP01_T_0119.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;3;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:32;5;293,0;273,0
+BCP01_T_0120.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;4;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:32;5;292,0;274,0
+BCP01_T_0121.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;5;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:32;5;291,0;274,0
+BCP01_T_0122.TIF;c:\ust\sampledata\BCP01\bcp01_trans_neck40\not affected\1;6;bcp01_trans_neck40;fix;BCP01;1;not affected;2018-09-20 17:42:32;5;288,0;277,0
+BCP01_T_0078.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;1;bcp01_trans_wrist;nerve;BCP01;1;affected;2018-09-20 17:46:04;1;319,0;310,0
+BCP01_T_0079.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;2;bcp01_trans_wrist;nerve;BCP01;1;affected;2018-09-20 17:46:04;1;323,0;290,0
+BCP01_T_0078.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;1;bcp01_trans_wrist;fix;BCP01;1;affected;2018-09-20 17:46:13;1;497,0;407,0
+BCP01_T_0079.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;2;bcp01_trans_wrist;fix;BCP01;1;affected;2018-09-20 17:46:14;1;502,0;391,0
+BCP01_T_0078.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;1;bcp01_trans_wrist;nerve;BCP01;1;affected;2018-09-20 17:46:09;2;317,0;291,0
+BCP01_T_0079.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;2;bcp01_trans_wrist;nerve;BCP01;1;affected;2018-09-20 17:46:09;2;318,0;268,0
+BCP01_T_0078.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;1;bcp01_trans_wrist;fix;BCP01;1;affected;2018-09-20 17:46:15;2;397,0;399,0
+BCP01_T_0079.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;2;bcp01_trans_wrist;fix;BCP01;1;affected;2018-09-20 17:46:15;2;406,0;422,0
+BCP01_T_0078.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;1;bcp01_trans_wrist;nerve;BCP01;1;affected;2018-09-20 17:46:10;3;336,0;343,0
+BCP01_T_0079.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;2;bcp01_trans_wrist;nerve;BCP01;1;affected;2018-09-20 17:46:10;3;342,0;319,0
+BCP01_T_0078.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;1;bcp01_trans_wrist;fix;BCP01;1;affected;2018-09-20 17:46:15;3;354,0;439,0
+BCP01_T_0079.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;2;bcp01_trans_wrist;fix;BCP01;1;affected;2018-09-20 17:46:16;3;369,0;427,0
+BCP01_T_0078.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;1;bcp01_trans_wrist;nerve;BCP01;1;affected;2018-09-20 17:46:11;4;367,0;341,0
+BCP01_T_0079.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;2;bcp01_trans_wrist;nerve;BCP01;1;affected;2018-09-20 17:46:11;4;361,0;317,0
+BCP01_T_0078.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;1;bcp01_trans_wrist;fix;BCP01;1;affected;2018-09-20 17:46:16;4;373,0;436,0
+BCP01_T_0079.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;2;bcp01_trans_wrist;fix;BCP01;1;affected;2018-09-20 17:46:16;4;379,0;412,0
+BCP01_T_0078.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;1;bcp01_trans_wrist;nerve;BCP01;1;affected;2018-09-20 17:46:12;5;410,0;371,0
+BCP01_T_0079.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;2;bcp01_trans_wrist;nerve;BCP01;1;affected;2018-09-20 17:46:12;5;421,0;349,0
+BCP01_T_0078.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;1;bcp01_trans_wrist;fix;BCP01;1;affected;2018-09-20 17:46:18;5;375,0;431,0
+BCP01_T_0079.TIF;c:\ust\sampledata\BCP01\bcp01_trans_wrist\affected\1;2;bcp01_trans_wrist;fix;BCP01;1;affected;2018-09-20 17:46:18;5;380,0;416,0

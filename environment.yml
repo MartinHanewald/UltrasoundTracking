@@ -1,0 +1,57 @@
+name: ust37
+channels:
+  - michael_wild
+  - conda-forge
+  - defaults
+dependencies:
+  - altgraph=0.15=py_0
+  - ca-certificates=2018.8.24=ha4d7672_0
+  - certifi=2018.8.24=py36_1001
+  - configparser=3.5.0=py36_1001
+  - cycler=0.10.0=py_1
+  - freetype=2.8.1=vc14_0
+  - future=0.16.0=py36_2
+  - hdf5=1.10.2=vc14_0
+  - icu=58.2=vc14_0
+  - jpeg=9b=vc14_2
+  - kiwisolver=1.0.1=py36he980bc4_2
+  - libflang=5.0.0=vc14_20180208
+  - libpng=1.6.34=vc14_0
+  - llvm-meta=5.0.0=0
+  - macholib=1.11=py_0
+  - matplotlib=2.2.2=py36_1
+  - mkl_fft=1.0.6=py36_0
+  - mkl_random=1.0.1=py36_0
+  - openblas=0.2.20=vc14_8
+  - openmp=5.0.0=vc14_1
+  - openssl=1.0.2p=hfa6e2cd_1000
+  - pandas=0.23.4=py36h830ac7b_0
+  - pefile=2018.8.8=py_0
+  - pip=18.0=py36_1001
+  - pycrypto=2.6.1=py36hfa6e2cd_1002
+  - pyparsing=2.2.2=py_0
+  - pyqt=5.6.0=py36h764d66f_7
+  - python=3.6.6=he025d50_0
+  - python-dateutil=2.7.3=py_0
+  - pytz=2018.5=py_0
+  - pywin32=224=py36hfa6e2cd_1000
+  - qt=5.6.2=vc14_1
+  - setuptools=40.4.3=py36_0
+  - simplejson=3.16.1=py36hfa6e2cd_0
+  - sip=4.18.1=py36h6538335_0
+  - six=1.11.0=py36_1001
+  - tornado=5.1.1=py36hfa6e2cd_0
+  - vc=14=0
+  - vs2015_runtime=14.0.25420=0
+  - wheel=0.32.0=py36_1000
+  - wincertstore=0.2=py36_1002
+  - zlib=1.2.11=vc14_0
+  - blas=1.0=mkl
+  - icc_rt=2017.0.4=h97af966_0
+  - intel-openmp=2019.0=118
+  - mkl=2019.0=118
+  - numpy=1.15.2=py36ha559c80_0
+  - numpy-base=1.15.2=py36h8128ebf_0
+  - opencv-contrib=3.3.1=py36_1
+prefix: c:\Miniconda\envs\ust37
+
