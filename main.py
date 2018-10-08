@@ -42,7 +42,7 @@ try:
     cv2.namedWindow('status', cv2.WINDOW_NORMAL)
     cv2.namedWindow('help', cv2.WINDOW_NORMAL)
     cv2.setMouseCallback('image', img.draw_shape)
-except Exception:
+except Exception as err:
     logging.error("Unexpected error: " + format(err))
     catch_errors()
 
@@ -50,7 +50,7 @@ except Exception:
 
 # main program loop
 while 1:
-    try:
+    #try:
         cv2.imshow('image', img.cvobj)
         cv2.imshow('status', img.status)
         if img.helpflag:
@@ -87,8 +87,8 @@ while 1:
             img.reload_status()
         elif k == ord('h'):
             img.helpflag = not img.helpflag
-    except Exception as err:
-        logging.error("Unexpected error: " + format(err))
-        catch_errors()
+    #except Exception as err:
+    #    logging.error("Unexpected error: " + format(err))
+    #    catch_errors()
 
 cv2.destroyAllWindows()

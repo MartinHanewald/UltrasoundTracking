@@ -96,10 +96,11 @@ class UltrasoundTracking:
             status = self.get_trial_status(self.trial)
 
             imgstatusheight = 400
-            rectspace = int((0.1 * imgstatusheight) / (self.n - 1))
+            n_minus = max(self.n -1, 1)
+            rectspace = int((0.1 * imgstatusheight) / (n_minus))
             space = 20
 
-            rectheight = int((imgstatusheight - (self.n - 1) * rectspace) / self.n)
+            rectheight = int((imgstatusheight - (n_minus) * rectspace) / self.n)
             rectwidth = 25
 
             rectsize = 25
@@ -179,7 +180,7 @@ class UltrasoundTracking:
         return var_dict
 
     def plot_distance(self):
-        if self.imglist:
+        if self.imglist and self.n > 1:
             plotted = False
             df = self.gather_points()
             plt.clf()
@@ -287,6 +288,7 @@ class UltrasoundTracking:
             self.show_rectangle('nerve')
             self.show_rectangle('fix')
             self.reload_status()
+            self.plot_distance()
         else:
             self.cvobj = np.zeros((512, 512, 3), np.uint8)
             self.tracking = []

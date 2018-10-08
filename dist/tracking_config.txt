@@ -5,7 +5,7 @@
 [General]
 # This is the main folder. All subfolders are scanned, and images in the deepest level are analyzed.
 # The first variable level always refers to this main folder.
-folder = sampledata\BCP01
+folder = C:\Users\Martin Hanewald\Downloads\BCPs with errors\BCP01
 
 # The scaling factor can be a floating point number. All output x,y coordinates are multiplied with it.
 scaling_factor = 1.0
