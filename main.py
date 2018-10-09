@@ -50,8 +50,9 @@ except Exception as err:
 
 # main program loop
 while 1:
-    #try:
-        cv2.imshow('image', img.cvobj)
+    try:
+        if(img.cvobj is not None):
+            cv2.imshow('image', img.cvobj)
         cv2.imshow('status', img.status)
         if img.helpflag:
             cv2.imshow('help', img.helpscreen)
@@ -87,8 +88,8 @@ while 1:
             img.reload_status()
         elif k == ord('h'):
             img.helpflag = not img.helpflag
-    #except Exception as err:
-    #    logging.error("Unexpected error: " + format(err))
-    #    catch_errors()
+    except Exception as err:
+        logging.error("Unexpected error: " + format(err))
+        catch_errors()
 
 cv2.destroyAllWindows()
