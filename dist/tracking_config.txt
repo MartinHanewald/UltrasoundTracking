@@ -4,8 +4,7 @@
 
 [General]
 # This is the main folder. All subfolders are scanned, and images in the deepest level are analyzed.
-# The first variable level always refers to this main folder.
-folder = C:\Users\Martin Hanewald\Downloads\BCPs with errors\BCP01
+folder = ./sampledata
 
 # The scaling factor can be a floating point number. All output x,y coordinates are multiplied with it.
 scaling_factor = 1.0
@@ -14,8 +13,12 @@ scaling_factor = 1.0
 image_format = TIF
 
 [Variables]
-# The level1 name always refers to the main folder above, all subsequent levels are applied to the subfolders
-# One should always match the number of levels to the number of subfolder levels + 1
+# Files should be stored in a hierarchical folder structure. The variables configured below determine
+# the naming of the columns in the .csv output file dependent on the folder in which a sequence was found.
+# All images should be on the same hierarchical level.
+# The level1 name always refers to the first subfolder level of the folder configured above, all 
+# subsequent levels are applied to the following folder levels.
+# One should always match the number of levels to the number of subfolder levels.
 level1 = patient
 level2 = movement
 level3 = side

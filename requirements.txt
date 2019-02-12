@@ -1,0 +1,6 @@
+simplejson
+pandas
+matplotlib
+numpy
+configparser
+pyinstaller

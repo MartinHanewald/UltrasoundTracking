@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import cv2
 import simplejson
-import datetime
+import datetime, time
 import logging
 
 # global constants
@@ -446,6 +446,7 @@ class UltrasoundTracking:
     def draw_shape(self, event, x, y, flags, param):
 
         if event == cv2.EVENT_LBUTTONDOWN:
+            #time.sleep(100)
             self.drawing = True
             self.ix, self.iy = x, y
 
